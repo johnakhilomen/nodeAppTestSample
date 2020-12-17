@@ -4,7 +4,6 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "webpack",
     "test": "mocha --require test/setup.js",
     "dev": "nodemon src/server.js",
     "start": "node src/server.js",
@@ -29,8 +28,6 @@
     "morgan": "^1.10.0",
     "nodemon": "^2.0.6",
     "uuid": "^8.3.2",
-    "webpack": "^4.44.1",
-    "webpack-cli": "^3.3.12",
     "winston": "^3.3.3"
   },
   "devDependencies": {
