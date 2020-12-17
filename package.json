@@ -4,9 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build" : "webpack",
-    "test": "mocha --recursive",
-    "start" : "node ./src/index.js"
+    "build": "webpack",
+    "test": "mocha --require test/setup.js",
+    "dev": "nodemon src/server.js",
+    "start": "node src/server.js",
+    "predeploy": "npm audit",
+    "deploy": "git push heroku main"
   },
   "repository": {
     "type": "git",
@@ -19,9 +22,20 @@
   },
   "homepage": "https://github.com/johnakhilomen/nodeAppTestSample#readme",
   "dependencies": {
-    "chai": "^4.2.0",
-    "mocha": "^8.1.1",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "helmet": "^4.2.0",
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.6",
+    "uuid": "^8.3.2",
     "webpack": "^4.44.1",
-    "webpack-cli": "^3.3.12"
+    "webpack-cli": "^3.3.12",
+    "winston": "^3.3.3"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^8.2.1",
+    "supertest": "^6.0.1"
   }
 }
